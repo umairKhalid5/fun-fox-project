@@ -1,6 +1,6 @@
 .week-1 {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .heading {
   background: var(--dark-pink);

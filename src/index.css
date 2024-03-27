@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
-/* Vairables */
+/* Variables */
 :root {
   --light-pink: #f8d1e0;
   --dark-pink: #fe6784;
@@ -59,11 +59,7 @@ ol[role='list'] {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  /* line-height: 1.5; */
-  /* padding: 0; */
   font-family: 'Short Stack', cursive;
-  background-color: var(--light-pink);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -116,36 +112,28 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* Utility classes */
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+/* App Styles */
+.app {
+  min-height: 100vh;
+  background-color: var(--light-pink);
+}
 .container {
   position: relative;
-  min-height: 100vh;
   padding: 70px 65px;
-  display: grid;
   grid-template-columns: 1fr;
-  place-items: center;
-  /* background-color: rgb(0, 128, 0, 0.2); */
   overflow: hidden;
+  /* background-color: rgb(0, 128, 0, 0.2); */
 
   /* TODO: Remove these in case we need full width */
   max-width: var(--container-width);
   margin-inline: auto;
-}
-
-.container::before {
-  content: url('./assets/transparent-2.svg');
-  position: absolute;
-  top: 32%;
-  left: 0px;
-  opacity: 0.5;
-  z-index: -1;
-}
-.container::after {
-  content: url('./assets/transparent-1.svg');
-  position: absolute;
-  top: 15%;
-  right: 0px;
-  opacity: 0.5;
-  z-index: -1;
 }
 
 /* Top Row */
@@ -158,11 +146,13 @@ textarea:not([rows]) {
   align-items: flex-start;
   /* background-color: rgb(0, 255, 255, 0.2); */
 }
+/* Logo */
 .logo {
   width: 160px;
   height: 90px;
   margin-top: -15px;
 }
+/* Week Image */
 .week {
   width: 153px;
 }
@@ -170,27 +160,7 @@ textarea:not([rows]) {
 .week img {
   width: 100%;
   object-fit: cover;
-  /* filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25)); */
-}
-
-/* Right & Left Icons in the Background */
-.column {
-  /* background: rgb(255, 0, 0, 0.2); */
-  position: absolute;
-  top: 120px;
-  bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 65px;
-}
-.left-column {
-  left: 0;
-  align-items: start;
-}
-.right-column {
-  right: 0;
-  align-items: end;
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
 }
 
 /* Bottom Row */
@@ -205,12 +175,102 @@ textarea:not([rows]) {
   /* background-color: rgb(37, 163, 161, 0.3); */
 }
 
+/* Buttons (Prev & Next)*/
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.buttons .btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+/* Week Number */
+.week-number {
+  position: relative;
+  width: 75px;
+  height: 37px;
+  overflow: hidden;
+}
+.week-number img,
+.week-number span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.week-number > img:nth-of-type(2) {
+  width: 73px;
+  height: 34px;
+}
+.week-number span {
+  color: var(--white);
+  font-size: var(--text-base);
+  left: 34%;
+}
+.week-number .border img {
+  left: 46px;
+  height: 34px;
+}
+.week-number .border img:first-of-type {
+  left: 45px;
+}
+.week-number .down-icon {
+  width: 10px;
+  left: 60px;
+}
+
 /* Main Content */
-.main {
+.wrapper {
   background-color: var(--light);
   border-radius: var(--radius-lg);
   padding: 20px 25px;
+  height: 694px;
+  position: relative;
+  z-index: 5;
 
   /* TODO: Remove this in case we need full width */
   max-width: var(--wrapper-width);
+}
+
+/* Dotted Patterns in the background */
+.wrapper::before,
+.wrapper::after {
+  position: absolute;
+  opacity: 0.7;
+  z-index: -1;
+}
+.wrapper::before {
+  content: url('./assets/transparent-2.svg');
+  top: 2rem;
+  right: 100%;
+}
+.wrapper::after {
+  content: url('./assets/transparent-1.svg');
+  top: -1.9rem;
+  left: 95%;
+}
+
+/* Right & Left Icons in the background */
+.column {
+  /* background: rgb(255, 0, 0, 0.2); */
+  position: absolute;
+  top: 2.5rem;
+  bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 65px;
+}
+.left-column {
+  left: -65px;
+  align-items: start;
+}
+.right-column {
+  right: -65px;
+  align-items: end;
 }
