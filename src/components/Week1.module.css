@@ -1,0 +1,84 @@
+.week-1 {
+  display: grid;
+  gap: 1rem;
+}
+.heading {
+  background: var(--dark-pink);
+  color: var(--white);
+  text-align: center;
+  margin-inline: auto;
+  padding: 7px 30px;
+  border: 3.3px dashed var(--border-light-pink);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 11px rgb(0, 0, 0, 0.25);
+  text-transform: capitalize;
+}
+.heading h2 {
+  font-size: var(--text-lg);
+  font-weight: 400;
+}
+.week-1 p,
+.week-1 ul li {
+  font-size: var(--text-md);
+}
+.welcome {
+  letter-spacing: -1.3px;
+}
+.description {
+  position: relative;
+  padding: 11px 14px;
+  background: var(--teal);
+  color: var(--white);
+  border: 3px dashed var(--border-cyan);
+  border-radius: var(--radius-base);
+  box-shadow: 0 0 11px rgb(0, 0, 0, 0.25);
+}
+.description p {
+  max-width: 875px;
+}
+.description > div {
+  position: absolute;
+  top: -3px;
+  right: 2rem;
+  height: 100%;
+}
+.clouds {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+.clouds > div {
+  position: relative;
+}
+.clouds div span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--text-base);
+  line-height: 20px;
+}
+.lesson {
+  margin-top: 1rem;
+  background: var(--dark-pink);
+  border-radius: var(--radius-lg);
+  padding: 16px 47px 30px;
+  position: relative;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 2px rgb(0, 0, 0, 0.25);
+}
+.lesson ul {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+.lesson > div {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  right: 15px;
+}
