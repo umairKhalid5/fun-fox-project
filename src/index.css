@@ -118,6 +118,19 @@ textarea:not([rows]) {
   display: grid;
   place-items: center;
 }
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-teal {
+  padding: 11px 14px;
+  background: var(--teal);
+  color: var(--white);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%23A4FDFBFF' stroke-width='4' stroke-dasharray='2%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: var(--radius-base);
+  box-shadow: 0 0 11px rgb(0, 0, 0, 0.25);
+}
 
 /* App Styles */
 .app {
@@ -129,28 +142,27 @@ textarea:not([rows]) {
   padding: 70px 65px;
   grid-template-columns: 1fr;
   overflow: hidden;
-  /* background-color: rgb(0, 128, 0, 0.2); */
 
   /* TODO: Remove these in case we need full width */
   max-width: var(--container-width);
+  width: 100%;
   margin-inline: auto;
 }
 
 /* Top Row */
 .top-row {
   position: absolute;
-  top: 12px;
-  left: 5px;
-  right: 5px;
+  top: 8px;
+  left: 3px;
+  right: 3px;
   display: flex;
   align-items: flex-start;
-  /* background-color: rgb(0, 255, 255, 0.2); */
 }
 /* Logo */
 .logo {
   width: 160px;
   height: 90px;
-  margin-top: -15px;
+  margin-top: -8px;
 }
 /* Week Image */
 .week {
@@ -172,7 +184,6 @@ textarea:not([rows]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: rgb(37, 163, 161, 0.3); */
 }
 
 /* Buttons (Prev & Next)*/
@@ -227,14 +238,17 @@ textarea:not([rows]) {
 /* Main Content */
 .wrapper {
   background-color: var(--light);
+  color: var(--dark);
   border-radius: var(--radius-lg);
   padding: 20px 25px;
-  height: 694px;
+  min-height: 694px;
   position: relative;
   z-index: 5;
+  font-size: var(--text-base);
 
   /* TODO: Remove this in case we need full width */
   max-width: var(--wrapper-width);
+  width: 100%;
 }
 
 /* Dotted Patterns in the background */
@@ -257,7 +271,6 @@ textarea:not([rows]) {
 
 /* Right & Left Icons in the background */
 .column {
-  /* background: rgb(255, 0, 0, 0.2); */
   position: absolute;
   top: 2.5rem;
   bottom: 2.5rem;
@@ -273,4 +286,40 @@ textarea:not([rows]) {
 .right-column {
   right: -65px;
   align-items: end;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    text-align: center;
+    padding-inline: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    --text-lg: 20px;
+    --text-md: 16px;
+    --text-base: 14px;
+  }
+  .container {
+    padding-inline: 40px;
+  }
+  .logo {
+    width: 125px;
+  }
+  .week {
+    width: 115px;
+  }
+  .wrapper {
+    padding-inline: 0.3rem;
+  }
+  .column {
+    width: 40px;
+  }
+  .left-column {
+    left: -40px;
+  }
+  .right-column {
+    right: -40px;
+  }
 }

@@ -1,25 +1,72 @@
 import React from 'react';
+import classes from './Week2.module.css';
+import beach from '../assets/beach.png';
+import night from '../assets/night.png';
+import clock from '../assets/clock.svg';
+import home from '../assets/home.svg';
 
 const Week2 = () => {
+  let clockIcon = <img src={clock} alt="Clock Icon" />;
+  let homeIcon = <img src={home} alt="Home Icon" />;
+
   return (
-    <div>
-      Week2
+    <div className={classes['week-2']}>
+      <div className={classes.title}>
+        <p>
+          Can you figure out the definition of setting from the following
+          examples?
+        </p>
+        <span>(take a minute to think about this)</span>
+      </div>
+
+      {/* Images Container */}
+      <div className={classes.images}>
+        {/* Left */}
+        <div className={classes.left}>
+          {/* Image Box */}
+          <div>
+            <img src={beach} alt="Beach Illustration" />
+          </div>
+          <span>Sunny day at a beach</span>
+        </div>
+        {/* Right */}
+        <div className={classes.right}>
+          {/* Image Box */}
+          <div>
+            <img src={night} alt="Beach Illustration" />
+          </div>
+          <span>A cold rainy night in a haunted house in October</span>
+        </div>
+      </div>
+
+      {/* Guesses */}
+      <div className={classes.guesses}>
+        <p>So, what do you think the definition of setting is?</p>
+        <div className={`flex-row ${classes.hint}`}>
+          <span>Any guesses?</span>
+          {/* Input */}
+          <div className={classes.answer}>
+            <span></span>
+          </div>
+          {/* Hint */}
+          <div className={`flex-row ${classes.icons}`}>
+            <span>Hint: </span>
+            {clockIcon}
+            {homeIcon}
+          </div>
+        </div>
+      </div>
+
+      {/* Teal Container */}
+      <div className={`${classes.settings} wrapper-teal`}>
+        Setting is the time {clockIcon} and place {homeIcon} of a story. It
+        often answers the questions: when? and where?
+      </div>
+
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
-        reprehenderit. Aliquid esse cupiditate ratione, inventore nesciunt illum
-        aut? Asperiores hic est, iusto id deleniti delectus et cumque laborum
-        totam necessitatibus fuga veniam provident. Mollitia nemo eligendi odio
-        animi! Vero omnis vel doloremque, molestiae cum aut quaerat perferendis
-        eaque architecto eius, sit consequatur natus iure eligendi impedit
-        adipisci culpa ut molestias. Soluta minima atque repellat ratione vero,
-        tempora facilis laborum nulla inventore distinctio hic excepturi
-        perspiciatis veniam? Ipsa aliquam quibusdam officiis eum alias quis
-        debitis mollitia, cum velit sit praesentium consectetur incidunt
-        laboriosam magni totam a provident unde modi pariatur quasi. Non ipsa,
-        explicabo similique veniam distinctio nesciunt. Quibusdam beatae, error
-        ad eos quae cum, voluptatem asperiores quidem voluptatum dolorem
-        temporibus porro odio, necessitatibus voluptates magni consectetur ea
-        vel assumenda. Quidem?
+        The time of the story could be in the past, future, day, night, summer
+        or winter. A story may take place in a school, a mall, a desert, an
+        airplane or in a variety of other places.
       </p>
     </div>
   );

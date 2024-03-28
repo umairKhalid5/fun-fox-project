@@ -66,9 +66,9 @@ const Layout = ({ activeWeek, changeWeek }) => {
             <img src={gradCap} alt="A Graduation Cap" />
           </div>
         </div>
+
+        {/* Week Data */}
         {WEEKS[activeWeek - 1].component}
-        {/* <Week1 /> */}
-        {/* Week goes here */}
       </main>
 
       {/* Botton Row */}

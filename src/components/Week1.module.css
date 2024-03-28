@@ -1,6 +1,7 @@
 .week-1 {
   display: grid;
   gap: 0.5rem;
+  width: 100%;
 }
 .heading {
   background: var(--dark-pink);
@@ -26,19 +27,14 @@
 }
 .description {
   position: relative;
-  padding: 11px 14px;
-  background: var(--teal);
-  color: var(--white);
-  border: 3px dashed var(--border-cyan);
-  border-radius: var(--radius-base);
-  box-shadow: 0 0 11px rgb(0, 0, 0, 0.25);
+  margin-block: 0.2rem;
 }
 .description p {
   max-width: 875px;
 }
 .description > div {
   position: absolute;
-  top: -3px;
+  top: -5px;
   right: 2rem;
   height: 100%;
 }
@@ -46,7 +42,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   text-transform: uppercase;
   margin-top: 1rem;
 }
@@ -60,13 +56,14 @@
   transform: translate(-50%, -50%);
   font-size: var(--text-base);
   line-height: 20px;
+  color: black;
 }
 .lesson {
+  position: relative;
   margin-top: 1rem;
   background: var(--dark-pink);
   border-radius: var(--radius-lg);
-  padding: 16px 47px 30px;
-  position: relative;
+  padding: 16px 45px 30px;
   margin-bottom: 1rem;
   box-shadow: 0 8px 2px rgb(0, 0, 0, 0.25);
 }
@@ -81,4 +78,62 @@
   top: 5px;
   left: 15px;
   right: 15px;
+  bottom: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .clouds {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .lesson > div {
+    left: 8px;
+    right: 10px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .lesson > div img {
+    object-position: top left;
+    height: 100%;
+  }
+  .description p {
+    text-align: left;
+    max-width: 77%;
+  }
+  .description > div {
+    right: 0.2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .description p {
+    max-width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .description > div {
+    position: relative;
+    order: 1;
+    margin-top: -0.8rem;
+  }
+  .lesson {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .lesson {
+    color: var(--white);
+    padding: 1rem 0.8rem;
+  }
+  .lesson > div {
+    display: none;
+  }
 }

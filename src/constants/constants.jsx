@@ -14,7 +14,7 @@ export const CLOUDS_DATA = [
 export const WEEKS = [
   { week: 1, component: <Week1 /> },
   { week: 2, component: <Week2 /> },
-  { week: 3, component: <Week3 /> },
+  // { week: 3, component: <Week3 /> },
 ];
 
 export const weeksLength = WEEKS.length;

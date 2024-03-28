@@ -26,7 +26,7 @@ const Week1 = () => {
       </div>
 
       {/* Teal Block */}
-      <div className={classes.description}>
+      <div className={`wrapper-teal ${classes.description}`}>
         <p>
           There are <strong>five</strong> elements which make the foundation for
           story writing. An element is an essential part of something and every
