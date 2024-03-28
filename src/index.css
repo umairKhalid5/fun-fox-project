@@ -260,8 +260,8 @@ textarea:not([rows]) {
 }
 .wrapper::before {
   content: url('./assets/transparent-2.svg');
-  top: 2rem;
-  right: 100%;
+  top: 2.2rem;
+  right: 99%;
 }
 .wrapper::after {
   content: url('./assets/transparent-1.svg');
@@ -269,7 +269,7 @@ textarea:not([rows]) {
   left: 95%;
 }
 
-/* Right & Left Icons in the background */
+/* Icons in the background */
 .column {
   position: absolute;
   top: 2.5rem;
