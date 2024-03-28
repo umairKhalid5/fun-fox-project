@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Week2.module.css';
-import beach from '../assets/beach.png';
-import night from '../assets/night.png';
-import clock from '../assets/clock.svg';
-import home from '../assets/home.svg';
+import beach from '../../assets/beach.png';
+import night from '../../assets/night.png';
+import clock from '../../assets/clock.svg';
+import home from '../../assets/home.svg';
 
 const Week2 = () => {
   let clockIcon = <img src={clock} alt="Clock Icon" />;

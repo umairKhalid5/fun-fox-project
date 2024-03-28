@@ -1,4 +1,4 @@
-import { Week1, Week2, Week3 } from '../components';
+import { Week1, Week2 } from '../components/Weeks';
 import cloud1 from '../assets/cloud-1.svg';
 import cloud2 from '../assets/cloud-2.svg';
 import cloud4 from '../assets/cloud-4.svg';

@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './Week1.module.css';
-import { CLOUDS_DATA } from '../constants/constants';
-import paper from '../assets/paper.svg';
-import child from '../assets/child-thinking.svg';
+import { CLOUDS_DATA } from '../../constants/constants';
+import paper from '../../assets/paper.svg';
+import child from '../../assets/child-thinking.svg';
 
 const Week1 = () => {
   return (
