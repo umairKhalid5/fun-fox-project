@@ -57,7 +57,7 @@ const Week2 = () => {
         </div>
       </div>
 
-      {/* Teal Container */}
+      {/* Teal Container - Settings */}
       <div className={`${classes.settings} wrapper-teal`}>
         Setting is the time {clockIcon} and place {homeIcon} of a story. It
         often answers the questions: when? and where?

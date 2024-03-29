@@ -25,7 +25,7 @@ const Week1 = () => {
         <p>Our aim is to make stories more interesting and exciting.</p>
       </div>
 
-      {/* Teal Block */}
+      {/* Teal Block - Description*/}
       <div className={`wrapper-teal ${classes.description}`}>
         <p>
           There are <strong>five</strong> elements which make the foundation for

@@ -3,6 +3,8 @@
   gap: 0.5rem;
   width: 100%;
 }
+
+/* Heading */
 .heading {
   background: var(--dark-pink);
   color: var(--white);
@@ -18,13 +20,18 @@
   font-size: var(--text-lg);
   font-weight: 400;
 }
+
 .week-1 p,
 .week-1 ul li {
   font-size: var(--text-md);
 }
+
+/* Welcome */
 .welcome {
   letter-spacing: -1.3px;
 }
+
+/* Description */
 .description {
   position: relative;
   margin-block: 0.2rem;
@@ -38,6 +45,8 @@
   right: 2rem;
   height: 100%;
 }
+
+/* Clouds */
 .clouds {
   display: flex;
   justify-content: space-between;
@@ -58,6 +67,8 @@
   line-height: 20px;
   color: black;
 }
+
+/* Lesson */
 .lesson {
   position: relative;
   margin-top: 1rem;
@@ -127,7 +138,6 @@
     padding-bottom: 4.5rem;
   }
 }
-
 @media screen and (max-width: 600px) {
   .lesson {
     color: var(--white);
