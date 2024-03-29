@@ -312,4 +312,11 @@ textarea:not([rows]) {
   .right-column {
     right: -40px;
   }
+  .week-number span {
+    left: 50%;
+  }
+  .week-number .border,
+  .week-number .down-icon {
+    display: none;
+  }
 }
