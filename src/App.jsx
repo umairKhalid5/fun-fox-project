@@ -8,7 +8,7 @@ function App() {
   const weekChangeHandler = direction => {
     if (direction === 'next') {
       if (activeWeek >= weeksLength) return setActiveWeek(1);
-      setActiveWeek(prev => (prev += 1));
+      return setActiveWeek(prev => (prev += 1));
     }
 
     if (direction === 'prev') {
